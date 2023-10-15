@@ -4,31 +4,31 @@ body{
 p{
     text-align: center; font-size:24px; padding:5px
 }
-#SUMMARY {
+.SUMMARY {
     text-align: center;
     font-size: 20px;
 }
-#PERSONAL_PROJECTS{
+.PERSONAL_PROJECTS{
     text-align: center; 
     font-size:20px
 }
-#CLEARANCE {
+.CLEARANCE {
     text-align: center; 
     font-size:20px
 }
-#TECHNICAL{
+.TECHNICAL{
     text-align: center; 
     font-size:20px
 }
-#EDUCATION{
+.EDUCATION{
     text-align: center; 
     font-size:20px
 }
-#EXPERIENCE{
+.EXPERIENCE{
     text-align: center; 
     font-size:20px
 }
-#COMMUNITY{
+.COMMUNITY{
     text-align: center; 
     font-size:20px
 }
