@@ -7,21 +7,45 @@
     <meta name="author" content="Richard Boyd" />
     <title>Richard Boyd • Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
+
+    <nav class="bg-yellow-400 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <a href="#" class="font-bold text-lg py-5 px-3">Richard Boyd</a>
+                    <a href="#summary" class="py-5 px-3 hover:underline">Summary</a>
+                    <a href="#projects" class="py-5 px-3 hover:underline">Projects</a>
+                    <a href="#education" class="py-5 px-3 hover:underline">Education</a>
+                    <a href="#experience" class="py-5 px-3 hover:underline">Experience</a>
+                    <a href="#community" class="py-5 px-3 hover:underline">Community</a>
+                    <a href="#contact" class="py-5 px-3 hover:underline">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <header class="text-center py-10 bg-yellow-400 text-white">
-        <img class="mx-auto rounded-full border-4 border-white w-40 h-40" src="rch.jpg" alt="Richard">
+        <img class="mx-auto rounded-full border-4 border-white w-40 h-40" src="IMG_0374.jpeg" alt="Richard">
         <h1 class="text-4xl font-bold mt-4">Richard Boyd</h1>
         <p class="mt-2 text-xl">Software Tester • Developer • Security+</p>
+        <a href="Richard_Boyd_Resume .pdf" download class="mt-4 inline-block bg-white text-yellow-400 font-semibold px-6 py-2 rounded shadow hover:bg-yellow-100">Download Resume</a>
     </header>
 
     <main class="max-w-5xl mx-auto p-6 space-y-12">
-        <section class="bg-white p-6 rounded-lg shadow">
+        <section id="summary" class="bg-white p-6 rounded-lg shadow reveal">
             <h2 class="text-2xl font-semibold mb-4">Professional Summary</h2>
             <p>Software Tester with experience in collaborative team environments and organizational processes. Highly analytical and detail-oriented with strong knowledge of software testing, software development, SDLC, OOP, technical writing, electronics, corrective and preventative maintenance, and training.</p>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow">
+        <section id="projects" class="bg-white p-6 rounded-lg shadow reveal">
             <h2 class="text-2xl font-semibold mb-4">Professional Projects</h2>
             <ul class="list-disc list-inside space-y-2">
                 <li><a href="https://GitHub.com/Parkofadown" target="_blank" class="text-yellow-500 hover:underline">GitHub Profile</a></li>
@@ -29,13 +53,13 @@
             </ul>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow">
+        <section id="education" class="bg-white p-6 rounded-lg shadow reveal">
             <h2 class="text-2xl font-semibold mb-4">Education</h2>
             <p><strong>07/2020</strong> — Bachelor of Science in Computer Information Science (Software Development), ECPI University, Virginia Beach, VA (GPA 3.10)<br>
                <strong>07/2023</strong> — COMPTIA Security+ Certified</p>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow space-y-4">
+        <section id="experience" class="bg-white p-6 rounded-lg shadow space-y-4 reveal">
             <h2 class="text-2xl font-semibold mb-4">Experience</h2>
             <div>
                 <h3 class="text-xl font-bold">Lead Test Engineer • Imagine One Technology & Management (10.24 - 2.25)</h3>
@@ -67,11 +91,34 @@
             </div>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow">
+        <section id="community" class="bg-white p-6 rounded-lg shadow reveal">
             <h2 class="text-2xl font-semibold mb-4">Community Development</h2>
             <p><strong>05.2016</strong> — Volunteer, Community Relations Project, Nuku'alofa, Tonga<br>
                <strong>04.2012</strong> — Volunteer, Rotary Club Fundraiser, Naval Base San Diego</p>
         </section>
+
+        <section id="contact" class="bg-white p-6 rounded-lg shadow reveal">
+            <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+            <form class="space-y-4 max-w-md" action="mailto:richard.boyd1218@gmail.com" method="POST" enctype="text/plain">
+                <div>
+                    <label class="block mb-1 font-semibold" for="name">Name</label>
+                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label class="block mb-1 font-semibold" for="email">Email</label>
+                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label class="block mb-1 font-semibold" for="message">Message</label>
+                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="bg-yellow-400 text-white font-semibold px-6 py-2 rounded shadow hover:bg-yellow-500">Send Message</button>
+            </form>
+        </section>
     </main>
+
+    <script>
+        ScrollReveal().reveal('.reveal', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'bottom', interval: 200 });
+    </script>
 </body>
 </html>
